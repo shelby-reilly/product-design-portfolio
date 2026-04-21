@@ -75,24 +75,30 @@ export const PolaroidStage = styled('div')(({ theme }) => ({
 
 
 export const StickyNoteTextBold = styled('span')(({ theme }) => ({
-    fontSize: "16px",
-    fontWeight: "600",
-    display: "inline",
+    fontFamily: "'Futura LT', 'Futura', sans-serif",
+    fontSize: '16px',
+    fontWeight: 700,
+    display: 'inline',
+    lineHeight: 1.15,
+    letterSpacing: '-0.02em',
     [theme.breakpoints.down('md')]: {
         fontSize: 'clamp(8px, 2.5vw, 11px)',
-        fontWeight: "700"
+        fontWeight: 700
     }
-}));
+}))
 
 export const StickyNoteTextRegular = styled('span')(({ theme }) => ({
-    fontSize: "16px",
-    fontWeight: "200",
-    display: "inline",
+    fontFamily: "'Futura LT', 'Futura', sans-serif",
+    fontSize: '16px',
+    fontWeight: 400,
+    display: 'inline',
+    lineHeight: 1.15,
+    letterSpacing: '-0.015em',
     [theme.breakpoints.down('md')]: {
         fontSize: 'clamp(8px, 2.5vw, 11px)',
-        fontWeight: "300"
+        fontWeight: 400
     }
-}));
+}))
 
 export const TextsWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -180,16 +186,17 @@ export const StickyNote = styled('div')(({ theme }) => ({
     height: 160,
     padding: '16px',
     borderRadius: 8,
-    fontFamily: 'Futura, sans-serif',
+    fontFamily: "'Futura LT', 'Futura', sans-serif",
     fontSize: 'clamp(14px, 2vw, 16px)',
     fontWeight: 600,
-    lineHeight: 1.3,
+    lineHeight: 1.15,
     color: '#000',
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 0,
     boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
     userSelect: 'none',
     [theme.breakpoints.down('md')]: {
@@ -199,7 +206,8 @@ export const StickyNote = styled('div')(({ theme }) => ({
         fontSize: 'clamp(8px, 2.5vw, 11px)',
         wordBreak: 'break-word',
         hyphens: 'auto',
-        lineHeight: 1.2
+        lineHeight: 1.1,
+        gap: 0
     }
 }))
 

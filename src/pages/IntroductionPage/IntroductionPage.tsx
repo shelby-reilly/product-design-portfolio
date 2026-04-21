@@ -397,10 +397,38 @@ export default function IntroductionPage() {
                         cursor: dragInfoRef.current?.id === 'note1' ? 'grabbing' : 'grab'
                     }}
                 >
-                    <StickyNoteTextRegular>I'm a </StickyNoteTextRegular>
-                    <StickyNoteTextBold>product designer</StickyNoteTextBold>
-                    <StickyNoteTextRegular> in </StickyNoteTextRegular>
-                    <StickyNoteTextBold>Austin Texas 🤠</StickyNoteTextBold>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            lineHeight: isMobile ? 1.16 : 1.18,
+                            transform: isMobile ? 'translateY(-1px)' : 'translateY(-2px)'
+                        }}
+                    >
+                        <div style={{fontSize: isMobile ? 'clamp(10px, 3vw, 13px)' : 18}}>
+                            <StickyNoteTextRegular>I'm a </StickyNoteTextRegular>
+                            <StickyNoteTextBold>product</StickyNoteTextBold>
+                        </div>
+                        <div style={{fontSize: isMobile ? 'clamp(10px, 3vw, 13px)' : 18}}>
+                            <StickyNoteTextBold>designer</StickyNoteTextBold>
+                            <StickyNoteTextRegular> in</StickyNoteTextRegular>
+                        </div>
+                        <div style={{fontSize: isMobile ? 'clamp(11px, 3.2vw, 14px)' : 22}}>
+                            <StickyNoteTextBold>Austin, Texas</StickyNoteTextBold>
+                        </div>
+                    </div>
+                    <Typography
+                        component="div"
+                        sx={{
+                            fontSize: isMobile ? 'clamp(13px, 3.8vw, 16px)' : 24,
+                            lineHeight: 1,
+                            mt: isMobile ? 0.2 : 0.8
+                        }}
+                    >
+                        🤠
+                    </Typography>
                 </StickyNote>
 
                 <StickyNote
@@ -415,10 +443,43 @@ export default function IntroductionPage() {
                         fontSize: isMobile ? 'clamp(8px, 2.5vw, 11px)' : undefined
                     }}
                 >
-                    <div style={{fontSize: isMobile ? 'clamp(8px, 2.5vw, 11px)' : undefined}}>
-                        M.S. HCI @ Georgia Tech
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            lineHeight: isMobile ? 1.14 : 1.16
+                        }}
+                    >
+                        <div style={{fontSize: isMobile ? 'clamp(10px, 3vw, 13px)' : 18}}>
+                            <StickyNoteTextBold>M.S. HCI </StickyNoteTextBold>
+                            <StickyNoteTextRegular>from</StickyNoteTextRegular>
+                        </div>
+                        <Typography
+                            component="div"
+                            sx={{
+                                fontFamily: "'Futura LT', 'Futura', sans-serif",
+                                fontWeight: 400,
+                                fontSize: isMobile ? 'clamp(10px, 3vw, 13px)' : 18,
+                                lineHeight: 1.08,
+                                letterSpacing: '-0.015em',
+                                mt: isMobile ? 0.15 : 0.3
+                            }}
+                        >
+                            Georgia Tech
+                        </Typography>
                     </div>
-                    <Typography sx={{fontSize: isMobile ? 'clamp(12px, 3vw, 14px)' : 24}}>🐝</Typography>
+                    <Typography
+                        component="div"
+                        sx={{
+                            fontSize: isMobile ? 'clamp(13px, 3.8vw, 16px)' : 24,
+                            lineHeight: 1,
+                            mt: isMobile ? 0.4 : 0.6
+                        }}
+                    >
+                        🐝
+                    </Typography>
                 </StickyNote>
 
                 <StickyNote
@@ -435,15 +496,17 @@ export default function IntroductionPage() {
                 >
                     <Typography
                         sx={{
-                            fontWeight: 800,
-                            fontSize: isMobile ? 'clamp(9px, 2.8vw, 11px)' : 20,
-                            mb: isMobile ? 0.3 : 1.5,
-                            lineHeight: 1.1,
+                            fontWeight: 700,
+                            fontFamily: "'Futura LT', 'Futura', sans-serif",
+                            fontSize: isMobile ? 'clamp(10px, 3vw, 12px)' : 15,
+                            mb: isMobile ? 0.3 : 1.2,
+                            lineHeight: 1.08,
+                            letterSpacing: '-0.015em',
                             whiteSpace: 'nowrap',
                             textAlign: 'center'
                         }}
                     >
-                        Previously @
+                        Previously
                     </Typography>
                     <img
                         src={`${process.env.PUBLIC_URL}/images/intro/logos.png`}
