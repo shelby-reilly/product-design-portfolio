@@ -2,7 +2,7 @@
   "name": "shelby-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://shelby-reilly.github.io/product-design-portfolio",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -28,7 +28,7 @@
     "gh-pages": "^6.3.0"
   },
   "scripts": {
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
