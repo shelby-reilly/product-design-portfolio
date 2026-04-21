@@ -50,11 +50,13 @@ import aboutMeShelbyStandingAlt from '../../assets/images/about-me-shelby-standi
 interface AboutPageProps {
     scrollPageOffset?: number
     showResumeButton?: boolean
+    showIntroChip?: boolean
 }
 
 export default function AboutPage({
     scrollPageOffset = 0,
-    showResumeButton = false
+    showResumeButton = false,
+    showIntroChip = true
 }: AboutPageProps) {
     const sectionRef = useRef<HTMLDivElement>(null)
     const [shelbyImageSrc, setShelbyImageSrc] = useState(aboutMeShelbyStandingAlt)
@@ -69,6 +71,7 @@ export default function AboutPage({
     const vw = isClient ? window.innerWidth : 1200
     const vh = isClient ? window.innerHeight : 800
     const isMobile = vw < 900
+    const isEmbeddedHomeSection = showResumeButton
 
 
     useEffect(() => {
@@ -92,7 +95,8 @@ export default function AboutPage({
             const pageHeight = sectionRef.current.getBoundingClientRect().height
             const viewportHeight = window.innerHeight || 1
             const extraPages = Math.max(0, pageHeight / viewportHeight - 1)
-            zoomPanContext.setMaxScrollPages(Math.max(scrollPageOffset + extraPages - 0.2, 0))
+            const trailingTrim = showResumeButton ? 0.2 : 0
+            zoomPanContext.setMaxScrollPages(Math.max(scrollPageOffset + extraPages - trailingTrim, 0))
         }
 
         updateScrollBounds()
@@ -102,7 +106,7 @@ export default function AboutPage({
             window.removeEventListener('resize', updateScrollBounds)
             zoomPanContext.setMaxScrollPages(DEFAULT_SCROLL_PAGES)
         }
-    }, [zoomPanContext, isClient, scrollPageOffset])
+    }, [zoomPanContext, isClient, scrollPageOffset, showResumeButton])
 
     useEffect(() => {
         const swapTimer = setTimeout(() => {
@@ -151,6 +155,11 @@ export default function AboutPage({
 
                 <TitleSectionContainer isMobile={isMobile}>
                     <TitleSectionInner>
+                        {showIntroChip && (
+                            <TitleChip isMobile={isMobile}>
+                                Hi, I'm Shelby!
+                            </TitleChip>
+                        )}
                         <TitleChip isMobile={isMobile}>
                             About me 👇
                         </TitleChip>
@@ -270,14 +279,14 @@ export default function AboutPage({
                         />
                     </HobbiesContentSection>
 
-                    <PolaroidSection isMobile={isMobile}>
+                    <PolaroidSection isMobile={isMobile} $embedded={isEmbeddedHomeSection}>
                         <Polaroid
                             ref={(el) => (imageRefs.current[3] = el)}
                             src={`${process.env.PUBLIC_URL}/images/polaroid/ctrly.png`}
                             alt="Ctrl+Y"
                             title="Ctrl+Y"
                             date="Nov 2024 - Current"
-                            width={isMobile ? 150 : 200}
+                            width={isMobile ? 150 : isEmbeddedHomeSection ? 224 : 200}
                             rotationDeg={5.75}
                             zIndex={3}
                             top={isMobile ? 0 : 20}
@@ -291,11 +300,11 @@ export default function AboutPage({
                             alt="dPod"
                             title="dPod"
                             date="Aug 2019 - Dec 2019"
-                            width={isMobile ? 150 : 184}
+                            width={isMobile ? 150 : isEmbeddedHomeSection ? 206 : 184}
                             rotationDeg={-10}
                             zIndex={2}
                             top={isMobile ? 10 : 40}
-                            left={isMobile ? 120 : 200}
+                            left={isMobile ? 120 : isEmbeddedHomeSection ? 222 : 200}
                             $isVisible={visibleImages.has(4)}
                             $delay={0.15}
                         />
@@ -305,11 +314,11 @@ export default function AboutPage({
                             alt="Design Community Advocate"
                             title="Design Community Advocate"
                             date="Austin Design Jam 2025"
-                            width={isMobile ? 168 : 190}
+                            width={isMobile ? 168 : isEmbeddedHomeSection ? 218 : 190}
                             rotationDeg={3}
                             zIndex={4}
                             top={isMobile ? 20 : 10}
-                            left={isMobile ? 240 : 380}
+                            left={isMobile ? 240 : isEmbeddedHomeSection ? 422 : 380}
                             $isVisible={visibleImages.has(5)}
                             $delay={0.2}
                         />

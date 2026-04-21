@@ -243,13 +243,16 @@ export function useEmojiTool({stageRef, currentRoute = ''}: UseEmojiToolParams) 
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
                 handleStampCancel()
+                if (activeTool === 'emoji' && emojiSubMode === 'stamp') {
+                    handleToolChange('hand')
+                }
             }
         }
         window.addEventListener('keydown', handleKeyDown)
         return () => {
             window.removeEventListener('keydown', handleKeyDown)
         }
-    }, [handleStampCancel])
+    }, [activeTool, emojiSubMode, handleStampCancel, handleToolChange])
 
     useEffect(() => () => stopAnimation(), [stopAnimation])
 

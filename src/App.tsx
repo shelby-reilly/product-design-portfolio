@@ -945,7 +945,7 @@ function AppContent() {
                         scale={stageScale}
                         $activeTool={activeTool}
                     >
-                        <AboutPage scrollPageOffset={4} showResumeButton/>
+                        <AboutPage scrollPageOffset={4} showResumeButton showIntroChip={false}/>
                     </PageWrapper>
 
                     <CursorChat/>

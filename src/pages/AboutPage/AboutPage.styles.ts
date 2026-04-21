@@ -262,7 +262,7 @@ export const BlueSquiggleImage = styled('img')<{
     }
 }))
 
-export const PolaroidSection = styled('div')<{ isMobile: boolean }>(({isMobile}) => ({
+export const PolaroidSection = styled('div')<{ isMobile: boolean; $embedded?: boolean }>(({isMobile, $embedded = false}) => ({
     position: 'relative',
     display: 'flex',
     flexDirection: 'row',
@@ -270,9 +270,9 @@ export const PolaroidSection = styled('div')<{ isMobile: boolean }>(({isMobile})
     justifyContent: 'center',
     gap: 0,
     flex: '0 0 auto',
-    marginTop: isMobile ? 0 : 40,
-    height: isMobile ? 0 : 285,
-    width: isMobile ? '100%' : 640,
+    marginTop: isMobile ? 0 : ($embedded ? 24 : 40),
+    height: isMobile ? 0 : ($embedded ? 320 : 285),
+    width: isMobile ? '100%' : ($embedded ? 720 : 640),
     overflow: 'visible'
 }))
 
