@@ -25,6 +25,8 @@ import {
     PresentationImage,
     PresentationSection,
     SectionTitle,
+    ResumeButton,
+    ResumeButtonRow,
     ShelbyImageContainer,
     ShelbyStandingImage,
     TextContentSection,
@@ -45,7 +47,15 @@ import aboutMePresentation from '../../assets/images/about-me-presentation-1.png
 import aboutMeShelbyStanding from '../../assets/images/about-me-shelby-standing-2.png'
 import aboutMeShelbyStandingAlt from '../../assets/images/about-me-shelby-standing-3.png'
 
-export default function AboutPage() {
+interface AboutPageProps {
+    scrollPageOffset?: number
+    showResumeButton?: boolean
+}
+
+export default function AboutPage({
+    scrollPageOffset = 0,
+    showResumeButton = false
+}: AboutPageProps) {
     const sectionRef = useRef<HTMLDivElement>(null)
     const [shelbyImageSrc, setShelbyImageSrc] = useState(aboutMeShelbyStandingAlt)
     const [visibleImages, setVisibleImages] = useState<Set<number>>(new Set())
@@ -82,7 +92,7 @@ export default function AboutPage() {
             const pageHeight = sectionRef.current.getBoundingClientRect().height
             const viewportHeight = window.innerHeight || 1
             const extraPages = Math.max(0, pageHeight / viewportHeight - 1)
-            zoomPanContext.setMaxScrollPages(Math.max(extraPages + 0.1, 0))
+            zoomPanContext.setMaxScrollPages(Math.max(scrollPageOffset + extraPages - 0.2, 0))
         }
 
         updateScrollBounds()
@@ -92,7 +102,7 @@ export default function AboutPage() {
             window.removeEventListener('resize', updateScrollBounds)
             zoomPanContext.setMaxScrollPages(DEFAULT_SCROLL_PAGES)
         }
-    }, [zoomPanContext, isClient])
+    }, [zoomPanContext, isClient, scrollPageOffset])
 
     useEffect(() => {
         const swapTimer = setTimeout(() => {
@@ -141,9 +151,6 @@ export default function AboutPage() {
 
                 <TitleSectionContainer isMobile={isMobile}>
                     <TitleSectionInner>
-                        <TitleChip isMobile={isMobile}>
-                            Hi, I'm Shelby!
-                        </TitleChip>
                         <TitleChip isMobile={isMobile}>
                             About me 👇
                         </TitleChip>
@@ -205,7 +212,7 @@ export default function AboutPage() {
                       src={magicWand}
                       alt=""
                       aria-hidden="true"
-                  /> Outside of work, I co-run a <strong>nonprofit</strong> focused on modernizing
+                  /> Outside of work, I co-run a <strong>start up</strong> focused on modernizing
                   tools for emergency services <strong>using AI/ML/Computer Vision.</strong>
                 </span>
                                 </IconTextRow>
@@ -294,11 +301,11 @@ export default function AboutPage() {
                         />
                         <Polaroid
                             ref={(el) => (imageRefs.current[5] = el)}
-                            src={`${process.env.PUBLIC_URL}/images/polaroid/hoop.png`}
-                            alt="LED Basketball Hoop"
-                            title="LED Basketball Hoop"
-                            date="Sept [wk] 2022"
-                            width={isMobile ? 150 : 150}
+                            src={`${process.env.PUBLIC_URL}/images/polaroid/shelby-design-jam-polaroid.png`}
+                            alt="Design Community Advocate"
+                            title="Design Community Advocate"
+                            date="Austin Design Jam 2025"
+                            width={isMobile ? 168 : 190}
                             rotationDeg={3}
                             zIndex={4}
                             top={isMobile ? 20 : 10}
@@ -308,6 +315,18 @@ export default function AboutPage() {
                         />
                     </PolaroidSection>
                 </BottomSection>
+
+                {showResumeButton && (
+                    <ResumeButtonRow>
+                        <ResumeButton
+                            href={`${process.env.PUBLIC_URL}/files/Senior Product Designer Shelby Reilly Resume.pdf`}
+                            download="Senior Product Designer Shelby Reilly Resume.pdf"
+                            aria-label="Download Shelby Reilly resume"
+                        >
+                            Download Resume
+                        </ResumeButton>
+                    </ResumeButtonRow>
+                )}
             </ContentWrapper>
         </MainWrapper>
     )

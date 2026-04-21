@@ -92,9 +92,11 @@ function AppContent() {
 
     const isMobile = viewport.w < 900
     const SECTION_GAP = isMobile ? 180 : 0
-    const INTRO_MEDTRACKER_GAP = SECTION_GAP
-    const MEDTRACKER_BISHOP_GAP = SECTION_GAP
+    const INTRO_MEDTRACKER_GAP = isMobile ? 260 : 120
+    const MEDTRACKER_BISHOP_GAP = isMobile ? 220 : 40
     const BISHOP_CODESIGN_GAP = SECTION_GAP
+    const CODESIGN_ABOUT_GAP = SECTION_GAP
+    const SECTION_STEP = viewport.h * (isMobile ? 0.78 : 0.84)
 
 
     const diag = Math.hypot(viewport.w, viewport.h)
@@ -389,15 +391,15 @@ function AppContent() {
     }, [stagePos.y, stageScale])
 
     const resetView = () => {
-        const pageH = viewport.h
         const currentY = -stagePos.y / stageScale
 
         // Calculate distances to each page
         const pagePositions = [
             0,
-            pageH + INTRO_MEDTRACKER_GAP,
-            pageH * 2 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP,
-            pageH * 3 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP
+            SECTION_STEP + INTRO_MEDTRACKER_GAP,
+            SECTION_STEP * 2 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP,
+            SECTION_STEP * 3 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP,
+            SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_ABOUT_GAP
         ]
 
         // Find closest page
@@ -924,17 +926,26 @@ function AppContent() {
                                  $activeTool={activeTool}>
                         <IntroductionPage/>
                     </PageWrapper>
-                    <PageWrapper baseY={viewport.h + INTRO_MEDTRACKER_GAP} translateX={stagePos.x} translateY={stagePos.y} scale={stageScale}
+                    <PageWrapper baseY={SECTION_STEP + INTRO_MEDTRACKER_GAP} translateX={stagePos.x} translateY={stagePos.y} scale={stageScale}
                                  $activeTool={activeTool}>
                         <MedTrackerPage/>
                     </PageWrapper>
-                    <PageWrapper baseY={viewport.h * 2 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP} translateX={stagePos.x} translateY={stagePos.y}
+                    <PageWrapper baseY={SECTION_STEP * 2 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP} translateX={stagePos.x} translateY={stagePos.y}
                                  scale={stageScale} $activeTool={activeTool}>
                         <ProjectBishopPage/>
                     </PageWrapper>
-                    <PageWrapper baseY={viewport.h * 3 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP} translateX={stagePos.x} translateY={stagePos.y}
+                    <PageWrapper baseY={SECTION_STEP * 3 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP} translateX={stagePos.x} translateY={stagePos.y}
                                  scale={stageScale} $activeTool={activeTool}>
                         <GoogleCodesignPage/>
+                    </PageWrapper>
+                    <PageWrapper
+                        baseY={SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_ABOUT_GAP}
+                        translateX={stagePos.x}
+                        translateY={stagePos.y}
+                        scale={stageScale}
+                        $activeTool={activeTool}
+                    >
+                        <AboutPage scrollPageOffset={4} showResumeButton/>
                     </PageWrapper>
 
                     <CursorChat/>

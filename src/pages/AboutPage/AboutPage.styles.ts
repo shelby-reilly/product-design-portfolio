@@ -370,3 +370,50 @@ export const IconWrapper = styled('img')(({theme}) => ({
     verticalAlign: 'middle',
     marginRight: 4
 }))
+
+export const ResumeButtonRow = styled('div')(({theme}) => ({
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '64px 0 16px',
+    [theme.breakpoints.down('md')]: {
+        padding: '40px 0 16px'
+    }
+}))
+
+export const ResumeButton = styled('a')(({theme}) => ({
+    position: 'relative',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 'clamp(240px, 20vw, 320px)',
+    minHeight: '60px',
+    padding: '14px 28px',
+    border: '4px solid rgba(245, 248, 255, 0.98)',
+    borderRadius: '6px',
+    backgroundColor: '#4361FF',
+    color: '#FFFFFF',
+    textDecoration: 'none',
+    fontFamily: "'Futura LT', 'Futura', sans-serif",
+    fontSize: 'clamp(16px, 1.1vw, 19px)',
+    fontWeight: 700,
+    letterSpacing: '0.06em',
+    textTransform: 'uppercase',
+    boxSizing: 'border-box',
+    boxShadow: '10px 10px 0 rgba(198, 208, 255, 0.58)',
+    transition: 'transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease',
+    '&:hover': {
+        transform: 'translate(-2px, -2px)',
+        boxShadow: '12px 12px 0 rgba(198, 208, 255, 0.64)',
+        backgroundColor: '#4B67FF',
+    },
+    [theme.breakpoints.down('md')]: {
+        minWidth: '220px',
+        minHeight: '54px',
+        padding: '12px 20px',
+        fontSize: '14px',
+        borderWidth: '4px',
+        borderRadius: '5px',
+        boxShadow: '8px 8px 0 rgba(198, 208, 255, 0.54)',
+    }
+}))

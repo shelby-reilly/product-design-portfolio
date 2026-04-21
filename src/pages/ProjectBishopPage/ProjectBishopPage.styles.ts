@@ -105,6 +105,7 @@ export const LearnMoreButton = styled('button')(({theme}) => ({
     minHeight: '68px',
     padding: '16px 30px',
     border: '5px solid rgba(245, 248, 255, 0.98)',
+    borderRadius: '6px',
     backgroundColor: '#4361FF',
     color: '#FFFFFF',
     fontFamily: '"Google Sans", Futura, sans-serif',
@@ -128,6 +129,7 @@ export const LearnMoreButton = styled('button')(({theme}) => ({
         padding: '14px 22px',
         fontSize: '15px',
         borderWidth: '4px',
+        borderRadius: '5px',
         boxShadow: '8px 8px 0 rgba(198, 208, 255, 0.56)',
     },
 }))
