@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/product-design-portfolio/static/css/main.4fddafce.css",
-    "main.js": "/product-design-portfolio/static/js/main.fa09f43d.js",
+    "main.js": "/product-design-portfolio/static/js/main.8698231d.js",
     "static/media/about-me-presentation-1.png": "/product-design-portfolio/static/media/about-me-presentation-1.5f3b7c64b78309d8b521.png",
     "static/media/codesign-evaluation-1.png": "/product-design-portfolio/static/media/codesign-evaluation-1.ee9e0f23c27be67dd198.png",
     "static/media/codesign-evaluation-2.png": "/product-design-portfolio/static/media/codesign-evaluation-2.c944dca311b693676e53.png",
@@ -110,10 +110,10 @@
     "index.html": "/product-design-portfolio/index.html",
     "static/media/wand-emoji.svg": "/product-design-portfolio/static/media/wand-emoji.f7c79f776f4f3ceaa4abdfd4af3e13c3.svg",
     "main.4fddafce.css.map": "/product-design-portfolio/static/css/main.4fddafce.css.map",
-    "main.fa09f43d.js.map": "/product-design-portfolio/static/js/main.fa09f43d.js.map"
+    "main.8698231d.js.map": "/product-design-portfolio/static/js/main.8698231d.js.map"
   },
   "entrypoints": [
     "static/css/main.4fddafce.css",
-    "static/js/main.fa09f43d.js"
+    "static/js/main.8698231d.js"
   ]
 }
