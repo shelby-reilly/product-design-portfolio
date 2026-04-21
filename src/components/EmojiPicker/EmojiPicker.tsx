@@ -101,7 +101,7 @@ export default function EmojiPicker({
                     active={subMode === 'wand'}
                     onClick={() => setSubMode('wand')}
                 >
-                    <WandEmoji width={"24px"} height={"24px"}/>
+                    <WandEmoji width={"22px"} height={"22px"}/>
 
                 </TopHalf>
                 <BottomHalf

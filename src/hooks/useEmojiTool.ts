@@ -13,6 +13,10 @@ const HOLD_OVERSHOOT = 0.08
 const SHAKE_SCALE_AMPLITUDE = 0.03
 const SHAKE_ROTATION_AMPLITUDE = 2
 const OVERSHOOT_DURATION_MS = 120
+const WAND_CURSOR_SVG = encodeURIComponent(
+    `<svg width="32" height="32" viewBox="0 0 151 151" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M103.821 55.1001H87.7508ZM92.7431 17.9665L75.6979 35.0118ZM55.6099 22.9591V6.88867ZM35.5221 35.0123L18.4768 17.967ZM23.4689 55.1001H7.39844ZM35.5221 75.1882L18.4768 92.2333ZM55.6099 103.312V87.241ZM143.997 143.488L79.7156 79.2058Z" fill="white"/><path d="M103.821 55.1001H87.7508M92.7431 17.9665L75.6979 35.0118M55.6099 22.9591V6.88867M35.5221 35.0123L18.4768 17.967M23.4689 55.1001H7.39844M35.5221 75.1882L18.4768 92.2333M55.6099 103.312V87.241M143.997 143.488L79.7156 79.2058" stroke="white" stroke-width="12.0529" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+)
+const WAND_CURSOR = `url("data:image/svg+xml,${WAND_CURSOR_SVG}") 3 3, auto`
 
 const getHoldStage = (elapsedSeconds: number) => {
     if (elapsedSeconds < 1) return 0
@@ -114,7 +118,7 @@ export function useEmojiTool({stageRef, currentRoute = ''}: UseEmojiToolParams) 
         if (emojiSubMode === 'stamp') {
             document.body.style.cursor = `url(${process.env.PUBLIC_URL}/images/stamp-cursor.png) 0 32, auto`
         } else {
-            document.body.style.cursor = `url(${process.env.PUBLIC_URL}/images/wand-cursor.png) 4 4, auto`
+            document.body.style.cursor = WAND_CURSOR
         }
     }
 
@@ -125,7 +129,7 @@ export function useEmojiTool({stageRef, currentRoute = ''}: UseEmojiToolParams) 
             if (mode === 'stamp') {
                 document.body.style.cursor = `url(${process.env.PUBLIC_URL}/images/stamp-cursor.png) 0 32, auto`
             } else {
-                document.body.style.cursor = `url(${process.env.PUBLIC_URL}/images/wand-cursor.png) 4 4, auto`
+                document.body.style.cursor = WAND_CURSOR
             }
         }
     }, [hasSelectedEmoji])
