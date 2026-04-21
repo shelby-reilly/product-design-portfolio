@@ -36,7 +36,7 @@ type Props = {}
 
 const PROFILES = [
     {name: 'Shelby Reilly', src: `${process.env.PUBLIC_URL}/images/shelby-rodeo.png`},
-    {name: 'Anonymous', src: `${process.env.PUBLIC_URL}/images/anonymous.png`}
+    {name: 'Anonymous', src: `${process.env.PUBLIC_URL}/images/anonymous-v2.png`}
 ]
 
 
