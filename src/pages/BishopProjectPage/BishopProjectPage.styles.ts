@@ -443,6 +443,119 @@ export const ResearchCardContent = styled('p')(({theme}) => ({
     color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.7)'
 }))
 
+export const ResearchMediaSection = styled('div')(({theme}) => ({
+    marginTop: 56,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 24,
+    width: '100%',
+    maxWidth: 1240,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+}))
+
+export const ResearchMediaIntro = styled('div')(({theme}) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 8,
+    alignItems: 'center',
+    textAlign: 'center',
+    maxWidth: 760,
+    margin: '0 auto',
+}))
+
+export const ResearchMediaTitle = styled('h3')(({theme}) => ({
+    margin: 0,
+    fontSize: 'clamp(24px, 3vw, 32px)',
+    fontWeight: 700,
+    color: theme.palette.text.primary,
+}))
+
+export const ResearchMediaText = styled('p')(({theme}) => ({
+    margin: 0,
+    fontSize: 16,
+    lineHeight: 1.7,
+    color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.72)' : 'rgba(0,0,0,0.72)',
+}))
+
+export const VideoCarouselShell = styled('div')(() => ({
+    position: 'relative',
+    width: '100%',
+    overflow: 'hidden',
+    paddingBottom: '110px',
+}))
+
+export const VideoCarouselTrack = styled('div')(({theme}) => ({
+    display: 'flex',
+    gap: 28,
+    width: 'fit-content',
+    padding: '28px 0 12px',
+    willChange: 'transform',
+    animation: 'bishop-video-scroll 36s linear infinite',
+    '@keyframes bishop-video-scroll': {
+        '0%': {
+            transform: 'translateX(0)'
+        },
+        '100%': {
+            transform: 'translateX(calc(-50% - 14px))'
+        }
+    },
+    [theme.breakpoints.down('md')]: {
+        gap: 16,
+        padding: '18px 0 8px',
+    },
+}))
+
+export const VideoCarouselCard = styled('article')(({theme}) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 0,
+    padding: 0,
+    borderRadius: 28,
+    background: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.04)',
+    border: theme.palette.mode === 'dark' ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(0,0,0,0.06)',
+    boxShadow: '0 20px 44px rgba(0,0,0,0.18)',
+    overflow: 'hidden',
+    width: 'min(30vw, 420px)',
+    flex: '0 0 auto',
+    '&:nth-of-type(4n + 1)': {
+        transform: 'translateY(26px)'
+    },
+    '&:nth-of-type(4n + 2)': {
+        transform: 'translateY(84px)'
+    },
+    '&:nth-of-type(4n + 3)': {
+        transform: 'translateY(18px)'
+    },
+    '&:nth-of-type(4n + 4)': {
+        transform: 'translateY(92px)'
+    },
+    [theme.breakpoints.down('md')]: {
+        width: '78vw',
+        borderRadius: 22,
+        '&:nth-of-type(4n + 1)': {
+            transform: 'translateY(8px)'
+        },
+        '&:nth-of-type(4n + 2)': {
+            transform: 'translateY(24px)'
+        },
+        '&:nth-of-type(4n + 3)': {
+            transform: 'translateY(4px)'
+        },
+        '&:nth-of-type(4n + 4)': {
+            transform: 'translateY(24px)'
+        }
+    }
+}))
+
+export const VideoCarouselVideo = styled('video')(() => ({
+    width: '100%',
+    aspectRatio: '16 / 10',
+    backgroundColor: '#090D1B',
+    objectFit: 'cover',
+    display: 'block',
+}))
+
 
 export const DesignSection = styled('section')(({theme}) => ({
     marginBottom: 80,
@@ -991,4 +1104,3 @@ export const LinkButton = styled('a')(({theme}) => ({
         transform: 'translateY(0)'
     }
 }))
-

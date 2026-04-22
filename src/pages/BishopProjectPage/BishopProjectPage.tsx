@@ -64,6 +64,10 @@ import {
     ResearchCardContent,
     ResearchCardTitle,
     ResearchGrid,
+    ResearchMediaIntro,
+    ResearchMediaSection,
+    ResearchMediaText,
+    ResearchMediaTitle,
     ResearchSection,
     ResearchTitle,
     SectionDivider,
@@ -83,6 +87,10 @@ import {
     VisionSection,
     VisionText,
     VisionTitle,
+    VideoCarouselCard,
+    VideoCarouselShell,
+    VideoCarouselTrack,
+    VideoCarouselVideo,
 } from './BishopProjectPage.styles'
 
 import bishopLogo from '../../assets/images/bishop-logo.png'
@@ -137,6 +145,25 @@ export default function BishopProjectPage() {
         designIteration6,
         designIteration7,
         designIteration8,
+    ]
+
+    const researchVideos = [
+        {
+            title: 'Discovery Interview Session 1',
+            src: `${process.env.PUBLIC_URL}/videos/bishop-user-session.mp4`
+        },
+        {
+            title: 'FigJam Workshop Board',
+            src: `${process.env.PUBLIC_URL}/videos/figjam-board.mp4`
+        },
+        {
+            title: 'Discovery Interview Session 2',
+            src: `${process.env.PUBLIC_URL}/videos/bishop-user-session-2.mp4`
+        },
+        {
+            title: 'Figma Working Board',
+            src: `${process.env.PUBLIC_URL}/videos/figma-board.mp4`
+        }
     ]
 
     return (
@@ -339,6 +366,36 @@ export default function BishopProjectPage() {
                                 </ResearchCardContent>
                             </ResearchCard>
                         </ResearchGrid>
+
+                        <ResearchMediaSection>
+                            <ResearchMediaIntro>
+                                <ResearchMediaTitle>Discovery Interviews and Workshops</ResearchMediaTitle>
+                                <ResearchMediaText>
+                                    Clips from stakeholder interviews and collaborative working sessions that shaped
+                                    the Bishop product direction.
+                                </ResearchMediaText>
+                            </ResearchMediaIntro>
+
+                            <VideoCarouselShell>
+                                <VideoCarouselTrack>
+                                    {[...researchVideos, ...researchVideos].map((video, idx) => (
+                                        <VideoCarouselCard key={`${video.src}-${idx}`}>
+                                            <VideoCarouselVideo
+                                                autoPlay
+                                                loop
+                                                muted
+                                                playsInline
+                                                preload="metadata"
+                                                disablePictureInPicture
+                                                controlsList="nodownload nofullscreen noremoteplayback"
+                                            >
+                                                <source src={video.src} type="video/mp4"/>
+                                            </VideoCarouselVideo>
+                                        </VideoCarouselCard>
+                                    ))}
+                                </VideoCarouselTrack>
+                            </VideoCarouselShell>
+                        </ResearchMediaSection>
                     </ResearchSection>
 
                     <SectionDivider/>
