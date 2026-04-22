@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/product-design-portfolio/static/css/main.4fddafce.css",
-    "main.js": "/product-design-portfolio/static/js/main.c2769a6b.js",
+    "main.js": "/product-design-portfolio/static/js/main.93663ce3.js",
+    "static/media/leo-onboarding-screens.svg": "/product-design-portfolio/static/media/leo-onboarding-screens.2ceb4145759c69320f245cff892bf524.svg",
     "static/media/about-me-presentation-1.png": "/product-design-portfolio/static/media/about-me-presentation-1.5f3b7c64b78309d8b521.png",
     "static/media/codesign-evaluation-1.png": "/product-design-portfolio/static/media/codesign-evaluation-1.ee9e0f23c27be67dd198.png",
     "static/media/codesign-evaluation-2.png": "/product-design-portfolio/static/media/codesign-evaluation-2.c944dca311b693676e53.png",
@@ -25,6 +26,7 @@
     "static/media/codesign-persona-3.png": "/product-design-portfolio/static/media/codesign-persona-3.94482ea328b1b848536c.png",
     "static/media/design_iteration_1.png": "/product-design-portfolio/static/media/design_iteration_1.b10825b69215698668ce.png",
     "static/media/bishop-hero-device-1.png": "/product-design-portfolio/static/media/bishop-hero-device-1.3372190d6e1ff0135b3a.png",
+    "static/media/leo.svg": "/product-design-portfolio/static/media/leo.9934a12d609a5e4df92219f72fae4ccf.svg",
     "static/media/design_iteration_5.png": "/product-design-portfolio/static/media/design_iteration_5.9f09f551284c89568cea.png",
     "static/media/research-pic-1.png": "/product-design-portfolio/static/media/research-pic-1.16405c6335c7609224d3.png",
     "static/media/define-user-flows.png": "/product-design-portfolio/static/media/define-user-flows.689caa20d84850e44cf3.png",
@@ -37,6 +39,7 @@
     "static/media/data_design_1.png": "/product-design-portfolio/static/media/data_design_1.b724623d022038e03c1a.png",
     "static/media/about-me-shelby-standing-2.png": "/product-design-portfolio/static/media/about-me-shelby-standing-2.2e0ed0c5f9745ee244b9.png",
     "static/media/codesign-persona-background.png": "/product-design-portfolio/static/media/codesign-persona-background.e4d269c17e1d250e745c.png",
+    "static/media/leo-audio-screens.svg": "/product-design-portfolio/static/media/leo-audio-screens.3a8ae9ba6e0c970e27615d1cbd5fd2ce.svg",
     "static/media/codesign-wireframe-sketch.png": "/product-design-portfolio/static/media/codesign-wireframe-sketch.d7308498964d00dba4d3.png",
     "static/media/codesign-design-prototypes.png": "/product-design-portfolio/static/media/codesign-design-prototypes.f83653de252d35e9fe6d.png",
     "static/media/shelby-laptop-sticker.png": "/product-design-portfolio/static/media/shelby-laptop-sticker.3cf115156e2a93f325d7.png",
@@ -82,6 +85,7 @@
     "static/media/codesign-prototype-9.png": "/product-design-portfolio/static/media/codesign-prototype-9.481e03c0947a96d0210e.png",
     "static/media/codesign-prototype-12.png": "/product-design-portfolio/static/media/codesign-prototype-12.4748aedb85b4058e8d1a.png",
     "static/media/bulk-mobile.png": "/product-design-portfolio/static/media/bulk-mobile.4f166f7508ef4ffbc3a6.png",
+    "static/media/leo-logo.png": "/product-design-portfolio/static/media/leo-logo.c317303babf21bde7831.png",
     "static/media/cutie-illustration.svg": "/product-design-portfolio/static/media/cutie-illustration.3fc2090c2ac8b136604439c87e97b9c0.svg",
     "static/media/research-pic-3.png": "/product-design-portfolio/static/media/research-pic-3.85197041552ea3797069.png",
     "static/media/codesign-prototype-6.png": "/product-design-portfolio/static/media/codesign-prototype-6.59065824afed0cce4101.png",
@@ -117,10 +121,10 @@
     "index.html": "/product-design-portfolio/index.html",
     "static/media/wand-emoji.svg": "/product-design-portfolio/static/media/wand-emoji.f7c79f776f4f3ceaa4abdfd4af3e13c3.svg",
     "main.4fddafce.css.map": "/product-design-portfolio/static/css/main.4fddafce.css.map",
-    "main.c2769a6b.js.map": "/product-design-portfolio/static/js/main.c2769a6b.js.map"
+    "main.93663ce3.js.map": "/product-design-portfolio/static/js/main.93663ce3.js.map"
   },
   "entrypoints": [
     "static/css/main.4fddafce.css",
-    "static/js/main.c2769a6b.js"
+    "static/js/main.93663ce3.js"
   ]
 }
