@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/product-design-portfolio/static/css/main.4fddafce.css",
-    "main.js": "/product-design-portfolio/static/js/main.7612a090.js",
+    "main.js": "/product-design-portfolio/static/js/main.02393cd3.js",
     "static/media/about-me-presentation-1.png": "/product-design-portfolio/static/media/about-me-presentation-1.5f3b7c64b78309d8b521.png",
     "static/media/codesign-evaluation-1.png": "/product-design-portfolio/static/media/codesign-evaluation-1.ee9e0f23c27be67dd198.png",
     "static/media/codesign-evaluation-2.png": "/product-design-portfolio/static/media/codesign-evaluation-2.c944dca311b693676e53.png",
@@ -14,6 +14,7 @@
     "static/media/design_iteration_4.png": "/product-design-portfolio/static/media/design_iteration_4.d2b4c8a58cd1c35c8435.png",
     "static/media/tablet.png": "/product-design-portfolio/static/media/tablet.2f4ee084e14ee96adb92.png",
     "static/media/macbook.png": "/product-design-portfolio/static/media/macbook.d01287cdddf09b56a25e.png",
+    "static/media/jamba-frame-540.png": "/product-design-portfolio/static/media/jamba-frame-540.34ed5bfe52a2045e1575.png",
     "static/media/data_design_2.png": "/product-design-portfolio/static/media/data_design_2.539821616c371eba7a79.png",
     "static/media/codesign-findings.png": "/product-design-portfolio/static/media/codesign-findings.40b1fd344fa78e649fd8.png",
     "static/media/design_iteration_2.png": "/product-design-portfolio/static/media/design_iteration_2.1a7bc54ae9e9c92682a7.png",
@@ -47,6 +48,7 @@
     "static/media/shelby-medal-sticker.png": "/product-design-portfolio/static/media/shelby-medal-sticker.f3603f9d7434315dc464.png",
     "static/media/codesign-prototype-14.png": "/product-design-portfolio/static/media/codesign-prototype-14.baa3fffaaa730df3ad69.png",
     "static/media/shrekby-sticker.png": "/product-design-portfolio/static/media/shrekby-sticker.b26d5790e99d2d91adc0.png",
+    "static/media/jamba-reviews-clean.png": "/product-design-portfolio/static/media/jamba-reviews-clean.575f78b4f1918d64fefd.png",
     "static/media/codesign-design-wireframes.png": "/product-design-portfolio/static/media/codesign-design-wireframes.816b350cd57f6acebefd.png",
     "static/media/research-pic-2.png": "/product-design-portfolio/static/media/research-pic-2.3c34a8a950de582e73bd.png",
     "static/media/iphone_3.png": "/product-design-portfolio/static/media/iphone_3.e6007a44c9dbbc28a3c4.png",
@@ -66,13 +68,17 @@
     "static/media/codesign-prototype-11.png": "/product-design-portfolio/static/media/codesign-prototype-11.54352280382b15b2dab7.png",
     "static/media/cursor-tab-icon.png": "/product-design-portfolio/static/media/cursor-tab-icon.330a343abb19f86b30a7.png",
     "static/media/Sets.png": "/product-design-portfolio/static/media/Sets.294e1698810a36eacb74.png",
+    "static/media/jamba-prototype.png": "/product-design-portfolio/static/media/jamba-prototype.38140abdc824b846e152.png",
     "static/media/codesign-competitive-industries.png": "/product-design-portfolio/static/media/codesign-competitive-industries.7ffbc718974b4e154658.png",
     "static/media/Inventory.png": "/product-design-portfolio/static/media/Inventory.c3243d25871c247b9350.png",
+    "static/media/jamba-mockups.png": "/product-design-portfolio/static/media/jamba-mockups.e108556a7f6e5955a683.png",
     "static/media/pikachu-sticker.png": "/product-design-portfolio/static/media/pikachu-sticker.aef6f19801208a6a9541.png",
     "static/media/codesign-prototype-8.png": "/product-design-portfolio/static/media/codesign-prototype-8.0640da2da2fcbbaaa76a.png",
     "static/media/fire-sticker.png": "/product-design-portfolio/static/media/fire-sticker.0aac9bffe4df8e6198aa.png",
+    "static/media/jamba-wireframes.png": "/product-design-portfolio/static/media/jamba-wireframes.aeee0e47810010569f73.png",
     "static/media/ui-design-decisions.png": "/product-design-portfolio/static/media/ui-design-decisions.2759104ec312160a6173.png",
     "static/media/codesign-prototype-10.png": "/product-design-portfolio/static/media/codesign-prototype-10.e551e818cd24a9f51d31.png",
+    "static/media/jamba-sus.png": "/product-design-portfolio/static/media/jamba-sus.64b35cb1a92a352f42d7.png",
     "static/media/codesign-prototype-9.png": "/product-design-portfolio/static/media/codesign-prototype-9.481e03c0947a96d0210e.png",
     "static/media/codesign-prototype-12.png": "/product-design-portfolio/static/media/codesign-prototype-12.4748aedb85b4058e8d1a.png",
     "static/media/bulk-mobile.png": "/product-design-portfolio/static/media/bulk-mobile.4f166f7508ef4ffbc3a6.png",
@@ -87,6 +93,7 @@
     "static/media/bishop-logo.png": "/product-design-portfolio/static/media/bishop-logo.0e8493cd2aa018f2e647.png",
     "static/media/medtracker-logo-small.png": "/product-design-portfolio/static/media/medtracker-logo-small.dd20e3b12d7eac548367.png",
     "static/media/main-mobile.png": "/product-design-portfolio/static/media/main-mobile.7f739c0ff5136751be75.png",
+    "static/media/jamba-reviews.png": "/product-design-portfolio/static/media/jamba-reviews.c35f0d1a367d44ad7bb9.png",
     "static/media/bishop_logo_small.png": "/product-design-portfolio/static/media/bishop_logo_small.209cb94c0abda9afa12f.png",
     "static/media/handshake-white.svg": "/product-design-portfolio/static/media/handshake-white.b64f4d6a7f51d37cb3e63ab749e895b4.svg",
     "static/media/handshake-color.svg": "/product-design-portfolio/static/media/handshake-color.b1d0cc35b74fc43d72578994380987cd.svg",
@@ -110,10 +117,10 @@
     "index.html": "/product-design-portfolio/index.html",
     "static/media/wand-emoji.svg": "/product-design-portfolio/static/media/wand-emoji.f7c79f776f4f3ceaa4abdfd4af3e13c3.svg",
     "main.4fddafce.css.map": "/product-design-portfolio/static/css/main.4fddafce.css.map",
-    "main.7612a090.js.map": "/product-design-portfolio/static/js/main.7612a090.js.map"
+    "main.02393cd3.js.map": "/product-design-portfolio/static/js/main.02393cd3.js.map"
   },
   "entrypoints": [
     "static/css/main.4fddafce.css",
-    "static/js/main.7612a090.js"
+    "static/js/main.02393cd3.js"
   ]
 }
