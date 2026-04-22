@@ -41,7 +41,7 @@ export default function JambaPage() {
             {id: 'jamba-copy', ref: copyRef}
         ]
         items.forEach((item) => item.ref.current && registerItem({id: item.id, element: item.ref.current}))
-        sectionRef.current && registerGroupAnchor('Jamba', sectionRef.current, 4)
+        sectionRef.current && registerGroupAnchor('Jamba', sectionRef.current, 5)
         return () => {
             items.forEach((item) => unregisterItem(item.id))
         }
@@ -54,30 +54,6 @@ export default function JambaPage() {
     return (
         <MainWrapper ref={sectionRef}>
             <MidSection>
-                <DescriptionWrapper
-                    ref={copyRef}
-                    onMouseDown={copyInteraction.handleMouseDown}
-                    onMouseMove={copyInteraction.handleMouseMove}
-                    onMouseUp={copyInteraction.handleMouseUp}
-                    onMouseLeave={copyInteraction.handleMouseLeave}
-                >
-                    <JambaTitle>Jamba</JambaTitle>
-                    <LineText>
-                        Redesigning the mobile ordering journey to reduce friction, improve clarity, and make a
-                        visually refreshed app actually easier to use.
-                    </LineText>
-
-                    <MetaGroup>
-                        <SubLineText>UX Researcher + UX Designer</SubLineText>
-                        <SubLineText>Customer journey, IA, prototype testing</SubLineText>
-                        <SubLineText>4-phase research and redesign process</SubLineText>
-                    </MetaGroup>
-
-                    <ButtonRow>
-                        <CaseStudyButton onClick={openCaseStudy}>Read case study</CaseStudyButton>
-                    </ButtonRow>
-                </DescriptionWrapper>
-
                 <ImagesWrapper
                     ref={visualRef}
                     onMouseDown={visualInteraction.handleMouseDown}
@@ -114,6 +90,31 @@ export default function JambaPage() {
                         </SignalBadge>
                     </CardCluster>
                 </ImagesWrapper>
+
+                <DescriptionWrapper
+                    ref={copyRef}
+                    onMouseDown={copyInteraction.handleMouseDown}
+                    onMouseMove={copyInteraction.handleMouseMove}
+                    onMouseUp={copyInteraction.handleMouseUp}
+                    onMouseLeave={copyInteraction.handleMouseLeave}
+                >
+                    <JambaTitle>Jamba</JambaTitle>
+                    <LineText>
+                        Redesigning the mobile ordering journey to reduce friction, improve clarity, and make a
+                        visually refreshed app actually easier to use.
+                    </LineText>
+
+                    <MetaGroup>
+                        <SubLineText>UX Researcher + UX Designer</SubLineText>
+                        <SubLineText>2019</SubLineText>
+                        <SubLineText>Customer journey, IA, prototype testing</SubLineText>
+                        <SubLineText>4-phase research and redesign process</SubLineText>
+                    </MetaGroup>
+
+                    <ButtonRow>
+                        <CaseStudyButton onClick={openCaseStudy}>Read case study</CaseStudyButton>
+                    </ButtonRow>
+                </DescriptionWrapper>
             </MidSection>
         </MainWrapper>
     )

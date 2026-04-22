@@ -251,6 +251,11 @@ export function useEmojiTool({stageRef, currentRoute = ''}: UseEmojiToolParams) 
                     handleToolChange('hand')
                 }
             }
+
+            if (event.key.toLowerCase() === 'v' && activeTool === 'emoji' && emojiSubMode === 'stamp') {
+                handleStampCancel()
+                handleToolChange('hand')
+            }
         }
         window.addEventListener('keydown', handleKeyDown)
         return () => {

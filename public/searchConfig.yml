@@ -21,6 +21,14 @@ groups:
       label: Google Codesign
       keywords: [google, codesign, design, collaboration]
       pageIndex: 3
+    - id: home-leo
+      label: Leo AI
+      keywords: [leo, ai, first responders, mental health, thesis]
+      pageIndex: 4
+    - id: home-jamba
+      label: Jamba
+      keywords: [jamba, mobile, ordering, ux, research]
+      pageIndex: 5
   CaseStudy:
     - id: casestudy-medtracker
       label: MedTracker Project
@@ -33,4 +41,12 @@ groups:
     - id: casestudy-googlecodesign
       label: Google Codesign Project
       keywords: [google, codesign, case, study, project, details]
-      route: '#/googlecodesign-project' 
+      route: '#/googlecodesign-project'
+    - id: casestudy-leo
+      label: Leo AI Project
+      keywords: [leo, ai, thesis, first responders, mental health, case study]
+      route: '#/leo-project'
+    - id: casestudy-jamba
+      label: Jamba Project
+      keywords: [jamba, case, study, project, ordering, mobile]
+      route: '#/jamba-project'

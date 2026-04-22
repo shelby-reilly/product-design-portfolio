@@ -6,12 +6,12 @@ export const MainWrapper = styled('section')(({theme}) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    padding: 'clamp(12px, 2vw, 24px) clamp(28px, 5vw, 72px) clamp(40px, 5vw, 64px)',
+    padding: 'clamp(4px, 1vw, 12px) clamp(28px, 5vw, 72px) clamp(40px, 5vw, 64px)',
     boxSizing: 'border-box',
     pointerEvents: 'auto',
     [theme.breakpoints.down('md')]: {
         justifyContent: 'flex-start',
-        padding: '12px 16px 40px',
+        padding: '4px 16px 40px',
     },
 }))
 
@@ -36,7 +36,7 @@ export const MidSection = styled('div')(({theme}) => ({
 export const ImagesWrapper = styled('div')(() => ({
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     pointerEvents: 'auto',
     minWidth: 0,
     cursor: 'pointer',
@@ -144,9 +144,9 @@ export const ReviewImage = styled('img')(() => ({
 export const DescriptionWrapper = styled('div')(({theme}) => ({
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     justifyContent: 'center',
-    textAlign: 'left',
+    textAlign: 'right',
     gap: '10px',
     minWidth: 0,
     pointerEvents: 'auto',
@@ -205,7 +205,7 @@ export const SubLineText = styled('div')(({theme}) => ({
 export const ButtonRow = styled('div')(({theme}) => ({
     marginTop: 'clamp(24px, 2.8vw, 38px)',
     display: 'flex',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-end',
     [theme.breakpoints.down('md')]: {
         justifyContent: 'center',
     },

@@ -86,6 +86,10 @@ export default function JambaProjectPage() {
                                 <DetailValue>Customer journey, IA, mobile ordering flow, prototype testing</DetailValue>
                             </DetailBlock>
                             <DetailBlock>
+                                <DetailLabel>Timeline</DetailLabel>
+                                <DetailValue>2019</DetailValue>
+                            </DetailBlock>
+                            <DetailBlock>
                                 <DetailLabel>Team</DetailLabel>
                                 <DetailValue>Student team project with shared research, synthesis, and design execution</DetailValue>
                             </DetailBlock>
