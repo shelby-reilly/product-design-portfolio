@@ -34,6 +34,8 @@ import {CursorSimulatorProvider, useCursorSimulator} from './context/CursorSimul
 import {CursorSimulator} from './components/CursorSimulator/CursorSimulator'
 import {BackButton as ProjectBackButton} from './pages/MedTrackerProjectPage/MedTrackerProjectPage.styles'
 import {useThemeMode} from './theme/ThemeProvider'
+import JambaPage from './pages/JambaPage/JambaPage'
+import JambaProjectPage from './pages/JambaProjectPage/JambaProjectPage'
 
 const AppContainer = styled(Box)(({theme}) => ({
     width: '100vw',
@@ -95,7 +97,8 @@ function AppContent() {
     const INTRO_MEDTRACKER_GAP = isMobile ? 260 : 120
     const MEDTRACKER_BISHOP_GAP = isMobile ? 220 : 40
     const BISHOP_CODESIGN_GAP = SECTION_GAP
-    const CODESIGN_ABOUT_GAP = SECTION_GAP
+    const CODESIGN_JAMBA_GAP = isMobile ? 220 : 80
+    const JAMBA_ABOUT_GAP = SECTION_GAP
     const SECTION_STEP = viewport.h * (isMobile ? 0.78 : 0.84)
 
 
@@ -213,7 +216,8 @@ function AppContent() {
 
         const isProjectPage = currentRoute === '#/medtracker-project' ||
             currentRoute === '#/bishop-project' ||
-            currentRoute === '#/googlecodesign-project'
+            currentRoute === '#/googlecodesign-project' ||
+            currentRoute === '#/jamba-project'
         if (isProjectPage) return
 
 
@@ -273,7 +277,8 @@ function AppContent() {
     useEffect(() => {
         const isProjectPage = currentRoute === '#/medtracker-project' ||
             currentRoute === '#/bishop-project' ||
-            currentRoute === '#/googlecodesign-project'
+            currentRoute === '#/googlecodesign-project' ||
+            currentRoute === '#/jamba-project'
         if (isProjectPage) return
 
         const isWandActive = activeTool === 'emoji' && emojiSubMode === 'wand'
@@ -399,7 +404,8 @@ function AppContent() {
             SECTION_STEP + INTRO_MEDTRACKER_GAP,
             SECTION_STEP * 2 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP,
             SECTION_STEP * 3 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP,
-            SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_ABOUT_GAP
+            SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_JAMBA_GAP,
+            SECTION_STEP * 5 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_JAMBA_GAP + JAMBA_ABOUT_GAP
         ]
 
         // Find closest page
@@ -461,7 +467,8 @@ function AppContent() {
     useEffect(() => {
         const isCaseStudyPage = currentRoute === '#/medtracker-project' ||
             currentRoute === '#/bishop-project' ||
-            currentRoute === '#/googlecodesign-project'
+            currentRoute === '#/googlecodesign-project' ||
+            currentRoute === '#/jamba-project'
 
         if (isCaseStudyPage) {
             setThemeMode('dark')
@@ -528,6 +535,27 @@ function AppContent() {
                 activeTool
             }}>
                 <GoogleCodesignProjectPage/>
+                <SearchPalette/>
+            </ZoomPanContext.Provider>
+        )
+    }
+
+    if (currentRoute === '#/jamba-project') {
+        return (
+            <ZoomPanContext.Provider value={{
+                stageRef,
+                stageScale,
+                setStageScale,
+                stagePos,
+                setStagePos,
+                maxScrollPages,
+                setMaxScrollPages,
+                clampStagePosition,
+                zoomIn,
+                zoomOut,
+                activeTool
+            }}>
+                <JambaProjectPage/>
                 <SearchPalette/>
             </ZoomPanContext.Provider>
         )
@@ -939,13 +967,22 @@ function AppContent() {
                         <GoogleCodesignPage/>
                     </PageWrapper>
                     <PageWrapper
-                        baseY={SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_ABOUT_GAP}
+                        baseY={SECTION_STEP * 4 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_JAMBA_GAP}
                         translateX={stagePos.x}
                         translateY={stagePos.y}
                         scale={stageScale}
                         $activeTool={activeTool}
                     >
-                        <AboutPage scrollPageOffset={4} showResumeButton showIntroChip={false}/>
+                        <JambaPage/>
+                    </PageWrapper>
+                    <PageWrapper
+                        baseY={SECTION_STEP * 5 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_JAMBA_GAP + JAMBA_ABOUT_GAP}
+                        translateX={stagePos.x}
+                        translateY={stagePos.y}
+                        scale={stageScale}
+                        $activeTool={activeTool}
+                    >
+                        <AboutPage scrollPageOffset={5} showResumeButton showIntroChip={false}/>
                     </PageWrapper>
 
                     <CursorChat/>

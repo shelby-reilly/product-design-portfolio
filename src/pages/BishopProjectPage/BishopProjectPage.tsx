@@ -647,7 +647,7 @@ export default function BishopProjectPage() {
 
                         <LinksContainer>
                             <LinkButton
-                                href="http://ctrly.org"
+                                href="https://shelby-reilly.github.io/ctrly/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
