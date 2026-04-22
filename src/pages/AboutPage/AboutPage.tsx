@@ -63,13 +63,12 @@ export default function AboutPage({
     const [visibleImages, setVisibleImages] = useState<Set<number>>(new Set())
     const imageRefs = useRef<(HTMLImageElement | HTMLDivElement | null)[]>([])
 
-    const {registerItem, unregisterItem, registerGroupAnchor} = useSearchContext()
+    const {registerGroupAnchor} = useSearchContext()
     const zoomPanContext = useZoomPanContext()
 
 
     const isClient = typeof window !== 'undefined'
     const vw = isClient ? window.innerWidth : 1200
-    const vh = isClient ? window.innerHeight : 800
     const isMobile = vw < 900
     const isEmbeddedHomeSection = showResumeButton
 
@@ -245,7 +244,7 @@ export default function AboutPage({
                     <HobbiesContentSection isMobile={isMobile}>
                         <AboutTextCard>
                             <HobbiesTitle isMobile={isMobile}>
-                                When I'm not in Figma (rare, bc figma&lt;3), find me:
+                                When I'm not in Figma or Claude, find me:
                             </HobbiesTitle>
 
                             <BulletList>
@@ -259,8 +258,16 @@ export default function AboutPage({
                                     🦮 <strong>Exploring Austin</strong> with my dog, Rodeo
                                 </BulletItem>
                                 <BulletItem>
-                                    👩‍💻 Turning life into mini design projects, from <strong>vibe-coding all my crazy
-                                    website ideas</strong> to executing next-level <strong>gardening</strong> projects
+                                    👩‍💻 Turning life into mini design projects, from <strong>vibe-coding all my{' '}
+                                    <a
+                                        href="https://shelby-reilly.github.io/hobbyist/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{color: 'inherit', textDecoration: 'underline'}}
+                                    >
+                                        crazy website ideas
+                                    </a>
+                                </strong> to executing next-level <strong>gardening</strong> projects
                                 </BulletItem>
                             </BulletList>
 
