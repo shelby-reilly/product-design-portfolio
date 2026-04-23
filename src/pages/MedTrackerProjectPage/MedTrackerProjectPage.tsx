@@ -1093,9 +1093,7 @@ export default function ProjectPage() {
                                                             maxWidth: {xs: 'min(92%, 460px)', md: 'min(100%, 680px)'},
                                                             maxHeight: {md: step1ImgMaxH ? `${step1ImgMaxH}px` : 'none'},
                                                             display: 'block',
-                                                            borderRadius: 2,
-                                                            border: '1px solid rgba(255,255,255,0.12)',
-                                                            boxShadow: '0 20px 44px rgba(0,0,0,.55)'
+                                                            borderRadius: 2
                                                         }}
                                                     />
                                                 </Box>
@@ -1262,9 +1260,7 @@ export default function ProjectPage() {
 
                                                             maxHeight: {md: step3ImgMaxH ? `${step3ImgMaxH}px` : 'none'},
                                                             display: 'block',
-                                                            borderRadius: 2,
-                                                            border: '1px solid rgba(255,255,255,0.12)',
-                                                            filter: 'drop-shadow(0 20px 44px rgba(0,0,0,.55))'
+                                                            borderRadius: 2
                                                         }}
                                                     />
                                                 </Box>

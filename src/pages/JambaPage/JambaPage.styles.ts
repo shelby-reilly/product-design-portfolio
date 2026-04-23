@@ -156,16 +156,15 @@ export const DescriptionWrapper = styled('div')(({theme}) => ({
     },
 }))
 
-export const JambaTitle = styled('div')(({theme}) => ({
-    fontFamily: '"Google Sans", Futura, sans-serif',
-    fontWeight: 700,
-    fontSize: 'clamp(52px, 4.9vw, 86px)',
-    lineHeight: 0.95,
-    letterSpacing: '-0.05em',
-    color: theme.palette.text.primary,
+export const JambaTitle = styled('img')(({theme}) => ({
+    width: 'min(100%, 340px)',
+    height: 'auto',
+    display: 'block',
     marginBottom: '8px',
+    userSelect: 'none',
+    WebkitUserDrag: 'none',
     [theme.breakpoints.down('md')]: {
-        fontSize: 'clamp(42px, 12vw, 64px)',
+        width: 'min(100%, 260px)',
     },
 }))
 

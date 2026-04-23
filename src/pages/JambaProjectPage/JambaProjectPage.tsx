@@ -1,11 +1,11 @@
 import React from 'react'
 import {GlobalStyles} from '@mui/material'
 import FloatingTopNav from '../../components/FloatingTopNav/FloatingTopNav'
-import {BackButton} from '../MedTrackerProjectPage/MedTrackerProjectPage.styles'
 import {
     ArtifactCaption,
     ArtifactGrid,
     ArtifactTitle,
+    JambaBackButton,
     ContentWrapper,
     DetailBlock,
     DetailGrid,
@@ -43,6 +43,7 @@ import jambaReviews from '../../assets/images/jamba/jamba-reviews-clean.png'
 import jambaPrototype from '../../assets/images/jamba/jamba-prototype.png'
 import jambaSus from '../../assets/images/jamba/jamba-sus.png'
 import jambaFrame540 from '../../assets/images/jamba/jamba-frame-540.png'
+import jambaLogo from '../../assets/images/jamba/jamba-logo.png'
 
 const figmaEmbedUrl =
     'https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/V2eNGEivrXHw12JUGXYuhE/Jamba-Final-Prototype-Demo?node-id=1-2880&p=f&viewport=504%2C242%2C0.04&t=AX1lkfqcVEcRKAx3-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2875&page-id=0%3A1'
@@ -64,13 +65,13 @@ export default function JambaProjectPage() {
             }}/>
 
             <FloatingTopNav/>
-            <BackButton onClick={handleBackClick}>← Back to Portfolio</BackButton>
+            <JambaBackButton onClick={handleBackClick}>← Back to Portfolio</JambaBackButton>
 
             <ContentWrapper>
                 <Hero>
                     <HeroCopy>
                         <Eyebrow>Mobile ordering case study</Eyebrow>
-                        <HeroTitle>Jamba</HeroTitle>
+                        <HeroTitle src={jambaLogo} alt="Jamba"/>
                         <HeroSummary>
                             Reworking the mobile ordering journey to reduce friction, clarify decisions, and make a
                             visually refreshed app actually easier to use.

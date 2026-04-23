@@ -25,6 +25,7 @@ import jambaWireframes from '../../assets/images/jamba/jamba-wireframes.png'
 import jambaMockups from '../../assets/images/jamba/jamba-mockups.png'
 import jambaPrototype from '../../assets/images/jamba/jamba-prototype.png'
 import jambaReviews from '../../assets/images/jamba/jamba-reviews.png'
+import jambaLogo from '../../assets/images/jamba/jamba-logo.png'
 
 export default function JambaPage() {
     const sectionRef = useRef<HTMLDivElement>(null)
@@ -98,7 +99,7 @@ export default function JambaPage() {
                     onMouseUp={copyInteraction.handleMouseUp}
                     onMouseLeave={copyInteraction.handleMouseLeave}
                 >
-                    <JambaTitle>Jamba</JambaTitle>
+                    <JambaTitle src={jambaLogo} alt="Jamba"/>
                     <LineText>
                         Redesigning the mobile ordering journey to reduce friction, improve clarity, and make a
                         visually refreshed app actually easier to use.

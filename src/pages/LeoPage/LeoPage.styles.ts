@@ -75,14 +75,15 @@ export const DescriptionWrapper = styled('div')(({theme}) => ({
     },
 }))
 
-export const Title = styled('div')(() => ({
-    margin: 0,
-    fontFamily: '"Google Sans", Futura, sans-serif',
-    fontWeight: 700,
-    fontSize: 'clamp(48px, 5vw, 80px)',
-    lineHeight: 0.95,
-    letterSpacing: '-0.05em',
-    color: '#FFFFFF',
+export const LogoTitle = styled('img')(({theme}) => ({
+    width: 'min(100%, 260px)',
+    height: 'auto',
+    display: 'block',
+    userSelect: 'none',
+    WebkitUserDrag: 'none',
+    [theme.breakpoints.down('md')]: {
+        width: 'min(100%, 220px)',
+    },
 }))
 
 export const LineText = styled('p')(({theme}) => ({

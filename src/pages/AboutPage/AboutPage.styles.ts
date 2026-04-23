@@ -47,7 +47,7 @@ export const ContentWrapper = styled('div')(({theme}) => ({
 
 export const TitleSectionContainer = styled('div')<{ isMobile: boolean }>(({isMobile}) => ({
     position: isMobile ? 'relative' : 'absolute',
-    top: isMobile ? 'auto' : 90,
+    top: isMobile ? 'auto' : 138,
     left: isMobile ? 'auto' : 84,
     zIndex: 10,
     width: isMobile ? '100%' : 'auto',
@@ -84,7 +84,8 @@ export const MainContentArea = styled('div')<{ isMobile: boolean }>(({isMobile})
     maxWidth: 1600,
     margin: '0 auto',
     padding: isMobile ? '100px 0 24px' : '300px 0 28px',
-    position: 'relative'
+    position: 'relative',
+    minWidth: 0
 }))
 
 export const PresentationSection = styled('div')<{ isMobile: boolean }>(({isMobile}) => ({
@@ -98,6 +99,7 @@ export const TextContentSection = styled('div')(({theme}) => ({
     flex: 1,
     position: 'relative',
     maxWidth: 900,
+    minWidth: 0,
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.down('lg')]: {
@@ -125,6 +127,11 @@ export const AboutTextCard = styled('div')(({theme}) => ({
     gap: 12,
     height: '100%',
     boxSizing: 'border-box',
+    minWidth: 0,
+    overflowWrap: 'anywhere',
+    [theme.breakpoints.down('lg')]: {
+        paddingRight: '28px',
+    },
     [theme.breakpoints.down('md')]: {
         padding: '20px',
         paddingRight: '120px',
@@ -213,14 +220,36 @@ export const BottomSection = styled('div')<{ isMobile: boolean }>(({isMobile}) =
     maxWidth: 1600,
     margin: '0 auto',
     padding: isMobile ? '24px 0 0px' : '60px 0 40px',
-    position: 'relative'
+    position: 'relative',
+    minWidth: 0,
+    '@media (max-width: 1480px)': {
+        gap: 32,
+    },
+    '@media (max-width: 1240px)': {
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        gap: 28,
+        padding: '36px clamp(18px, 3vw, 32px) 24px',
+    }
 }))
 
 export const HobbiesContentSection = styled('div')<{ isMobile: boolean }>(({isMobile}) => ({
     position: 'relative',
     flex: isMobile ? '1 1 auto' : '0 0 60%',
     maxWidth: isMobile ? '100%' : '600px',
-    width: isMobile ? '100%' : '60%'
+    width: isMobile ? '100%' : '60%',
+    minWidth: 0,
+    '@media (max-width: 1480px)': {
+        flex: '0 1 540px',
+        width: 'auto',
+        maxWidth: '540px',
+    },
+    '@media (max-width: 1240px)': {
+        flex: '1 1 auto',
+        width: 'min(100%, 760px)',
+        maxWidth: '760px',
+        margin: '0 auto',
+    }
 }))
 
 export const HobbiesTitle = styled('div')<{ isMobile: boolean }>(({isMobile}) => ({
@@ -273,7 +302,19 @@ export const PolaroidSection = styled('div')<{ isMobile: boolean; $embedded?: bo
     marginTop: isMobile ? 0 : ($embedded ? 24 : 40),
     height: isMobile ? 0 : ($embedded ? 320 : 285),
     width: isMobile ? '100%' : ($embedded ? 720 : 640),
-    overflow: 'visible'
+    maxWidth: '100%',
+    overflow: 'visible',
+    '@media (max-width: 1480px)': {
+        width: $embedded ? 560 : 520,
+        height: $embedded ? 300 : 270,
+    },
+    '@media (max-width: 1240px)': {
+        width: 'min(100%, 760px)',
+        height: $embedded ? 320 : 285,
+        marginTop: 0,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    }
 }))
 
 

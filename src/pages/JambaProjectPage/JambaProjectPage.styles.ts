@@ -6,6 +6,31 @@ export const ProjectPageContainer = styled('div')(() => ({
     color: '#161616',
 }))
 
+export const JambaBackButton = styled('button')(() => ({
+    display: 'inline-flex',
+    position: 'fixed',
+    top: 20,
+    left: 20,
+    zIndex: 1700,
+    alignItems: 'center',
+    gap: 8,
+    padding: '10px 16px',
+    borderRadius: 10,
+    background: 'rgba(255,255,255,0.94)',
+    color: '#8F4D15',
+    border: '1px solid rgba(229, 134, 43, 0.22)',
+    boxShadow: '0 10px 30px rgba(173, 110, 40, 0.14)',
+    cursor: 'pointer',
+    fontSize: 14,
+    fontWeight: 700,
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease',
+    '&:hover': {
+        transform: 'translateX(-3px)',
+        boxShadow: '0 14px 34px rgba(173, 110, 40, 0.18)',
+        background: '#FFFFFF',
+    },
+}))
+
 export const ContentWrapper = styled('div')(({theme}) => ({
     width: '100%',
     maxWidth: '1240px',
@@ -45,12 +70,16 @@ export const Eyebrow = styled('div')(() => ({
     color: '#E5862B',
 }))
 
-export const HeroTitle = styled('h1')(() => ({
+export const HeroTitle = styled('img')(({theme}) => ({
+    width: 'min(100%, 320px)',
+    height: 'auto',
+    display: 'block',
     margin: 0,
-    fontFamily: '"Google Sans", Futura, sans-serif',
-    fontSize: 'clamp(46px, 7vw, 88px)',
-    lineHeight: 0.94,
-    letterSpacing: '-0.05em',
+    userSelect: 'none',
+    WebkitUserDrag: 'none',
+    [theme.breakpoints.down('md')]: {
+        width: 'min(100%, 250px)',
+    },
 }))
 
 export const HeroSummary = styled('p')(() => ({

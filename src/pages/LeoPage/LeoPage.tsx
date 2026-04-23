@@ -4,6 +4,7 @@ import {useSearchContext} from '../../context/SearchContext'
 import {
     ButtonRow,
     DescriptionWrapper,
+    LogoTitle,
     LeoArt,
     LineText,
     MainWrapper,
@@ -11,11 +12,11 @@ import {
     MidSection,
     PrimaryButton,
     SubLineText,
-    Title,
     VisualWrapper,
 } from './LeoPage.styles'
 
 import leoArt from '../../assets/images/leo/leo.svg'
+import leoLogo from '../../assets/images/leo/leo-home-logo.png'
 
 export default function LeoPage() {
     const sectionRef = useRef<HTMLDivElement>(null)
@@ -44,7 +45,7 @@ export default function LeoPage() {
                     onMouseUp={copyInteraction.handleMouseUp}
                     onMouseLeave={copyInteraction.handleMouseLeave}
                 >
-                    <Title>Leo AI</Title>
+                    <LogoTitle src={leoLogo} alt="Leo AI"/>
                     <LineText>
                         A mental health conversational AI concept for first responders, designed to create lower-friction
                         support around an issue that too often goes unaddressed until crisis.

@@ -70,6 +70,7 @@ export default function AboutPage({
     const isClient = typeof window !== 'undefined'
     const vw = isClient ? window.innerWidth : 1200
     const isMobile = vw < 900
+    const isCompactDesktop = vw < 1480 && vw >= 900
     const isEmbeddedHomeSection = showResumeButton
 
 
@@ -265,7 +266,7 @@ export default function AboutPage({
                                         rel="noopener noreferrer"
                                         style={{color: 'inherit', textDecoration: 'underline'}}
                                     >
-                                        crazy website ideas
+                                        crazy ideas
                                     </a>
                                 </strong> to executing next-level <strong>gardening</strong> projects
                                 </BulletItem>
@@ -293,10 +294,10 @@ export default function AboutPage({
                             alt="Ctrl+Y"
                             title="Ctrl+Y"
                             date="Nov 2024 - Current"
-                            width={isMobile ? 150 : isEmbeddedHomeSection ? 224 : 200}
+                            width={isMobile ? 150 : isCompactDesktop ? 196 : isEmbeddedHomeSection ? 224 : 200}
                             rotationDeg={5.75}
                             zIndex={3}
-                            top={isMobile ? 0 : 20}
+                            top={isMobile ? 0 : isCompactDesktop ? 28 : 20}
                             left={isMobile ? 0 : 0}
                             $isVisible={visibleImages.has(3)}
                             $delay={0.1}
@@ -307,11 +308,11 @@ export default function AboutPage({
                             alt="dPod"
                             title="dPod"
                             date="Aug 2019 - Dec 2019"
-                            width={isMobile ? 150 : isEmbeddedHomeSection ? 206 : 184}
+                            width={isMobile ? 150 : isCompactDesktop ? 182 : isEmbeddedHomeSection ? 206 : 184}
                             rotationDeg={-10}
                             zIndex={2}
-                            top={isMobile ? 10 : 40}
-                            left={isMobile ? 120 : isEmbeddedHomeSection ? 222 : 200}
+                            top={isMobile ? 10 : isCompactDesktop ? 44 : 40}
+                            left={isMobile ? 120 : isCompactDesktop ? 184 : isEmbeddedHomeSection ? 222 : 200}
                             $isVisible={visibleImages.has(4)}
                             $delay={0.15}
                         />
@@ -321,11 +322,11 @@ export default function AboutPage({
                             alt="Design Community Advocate"
                             title="Design Community Advocate"
                             date="Austin Design Jam 2025"
-                            width={isMobile ? 168 : isEmbeddedHomeSection ? 218 : 190}
+                            width={isMobile ? 168 : isCompactDesktop ? 192 : isEmbeddedHomeSection ? 218 : 190}
                             rotationDeg={3}
                             zIndex={4}
-                            top={isMobile ? 20 : 10}
-                            left={isMobile ? 240 : isEmbeddedHomeSection ? 422 : 380}
+                            top={isMobile ? 20 : isCompactDesktop ? 18 : 10}
+                            left={isMobile ? 240 : isCompactDesktop ? 346 : isEmbeddedHomeSection ? 422 : 380}
                             $isVisible={visibleImages.has(5)}
                             $delay={0.2}
                         />

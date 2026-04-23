@@ -42,7 +42,7 @@ import {
 
 import leoLogo from '../../assets/images/leo/leo-logo.png'
 import leoOnboarding from '../../assets/images/leo/leo-onboarding-screens.svg'
-import leoAudio from '../../assets/images/leo/leo-audio-screens.svg'
+import leoAudio from '../../assets/images/leo/leo-audio-screens-updated.png'
 
 const slidesEmbedUrl =
     'https://docs.google.com/presentation/d/1I74Pv8jC8fhwP5ax1YQbwnqYxcITFA9nQY2lRf6aB98/embed?start=false&loop=false&delayms=3000'
