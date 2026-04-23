@@ -261,11 +261,13 @@ export default function JambaProjectPage() {
                     <SplitSection>
                         <div>
                             <SectionEyebrow>Prototype</SectionEyebrow>
-                            <SectionTitle>Testing the redesigned flow in motion.</SectionTitle>
+                            <SectionTitle>Examples of design changes in the ordering flow.</SectionTitle>
                             <SectionBody>
-                                The strongest artifact from the project is the working prototype. It shows how the
-                                revised flow handles sign-up, progress cues, and the ordering path as a more coherent
-                                system rather than a set of disconnected screens.
+                                One of the clearest shifts was in the menu experience itself. The redesign simplified
+                                the information architecture, made category switching more visible, and surfaced the
+                                details users needed to make faster decisions. Instead of asking people to scan across
+                                stacked patterns and hidden context, the flow gave the menu a clearer structure and a
+                                more predictable reading path.
                             </SectionBody>
                         </div>
 
@@ -273,8 +275,10 @@ export default function JambaProjectPage() {
                             <VisualFigure>
                                 <VisualImage src={jambaPrototype} alt="Jamba prototype progress state"/>
                                 <ArtifactCaption>
-                                    Progress indicators and clearer step framing made multi-step actions feel less
-                                    opaque and easier to complete on mobile.
+                                    Design changes included moving smoothie browsing into a cleaner vertical menu,
+                                    using tabs to expose categories more clearly, keeping search visible and
+                                    consistent, surfacing ingredients, calories, and price earlier, and removing
+                                    persistent location details when they were not needed.
                                 </ArtifactCaption>
                             </VisualFigure>
                         </ImageColumn>
