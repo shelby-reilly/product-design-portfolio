@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/product-design-portfolio/static/css/main.4fddafce.css",
-    "main.js": "/product-design-portfolio/static/js/main.93663ce3.js",
+    "main.js": "/product-design-portfolio/static/js/main.9a9330d0.js",
     "static/media/leo-onboarding-screens.svg": "/product-design-portfolio/static/media/leo-onboarding-screens.2ceb4145759c69320f245cff892bf524.svg",
+    "static/media/leo-audio-screens-updated.png": "/product-design-portfolio/static/media/leo-audio-screens-updated.5deecb374b7597f3a204.png",
     "static/media/about-me-presentation-1.png": "/product-design-portfolio/static/media/about-me-presentation-1.5f3b7c64b78309d8b521.png",
     "static/media/codesign-evaluation-1.png": "/product-design-portfolio/static/media/codesign-evaluation-1.ee9e0f23c27be67dd198.png",
     "static/media/codesign-evaluation-2.png": "/product-design-portfolio/static/media/codesign-evaluation-2.c944dca311b693676e53.png",
@@ -39,7 +40,6 @@
     "static/media/data_design_1.png": "/product-design-portfolio/static/media/data_design_1.b724623d022038e03c1a.png",
     "static/media/about-me-shelby-standing-2.png": "/product-design-portfolio/static/media/about-me-shelby-standing-2.2e0ed0c5f9745ee244b9.png",
     "static/media/codesign-persona-background.png": "/product-design-portfolio/static/media/codesign-persona-background.e4d269c17e1d250e745c.png",
-    "static/media/leo-audio-screens.svg": "/product-design-portfolio/static/media/leo-audio-screens.3a8ae9ba6e0c970e27615d1cbd5fd2ce.svg",
     "static/media/codesign-wireframe-sketch.png": "/product-design-portfolio/static/media/codesign-wireframe-sketch.d7308498964d00dba4d3.png",
     "static/media/codesign-design-prototypes.png": "/product-design-portfolio/static/media/codesign-design-prototypes.f83653de252d35e9fe6d.png",
     "static/media/shelby-laptop-sticker.png": "/product-design-portfolio/static/media/shelby-laptop-sticker.3cf115156e2a93f325d7.png",
@@ -85,9 +85,11 @@
     "static/media/codesign-prototype-9.png": "/product-design-portfolio/static/media/codesign-prototype-9.481e03c0947a96d0210e.png",
     "static/media/codesign-prototype-12.png": "/product-design-portfolio/static/media/codesign-prototype-12.4748aedb85b4058e8d1a.png",
     "static/media/bulk-mobile.png": "/product-design-portfolio/static/media/bulk-mobile.4f166f7508ef4ffbc3a6.png",
+    "static/media/leo-home-logo.png": "/product-design-portfolio/static/media/leo-home-logo.c317303babf21bde7831.png",
     "static/media/leo-logo.png": "/product-design-portfolio/static/media/leo-logo.c317303babf21bde7831.png",
     "static/media/cutie-illustration.svg": "/product-design-portfolio/static/media/cutie-illustration.3fc2090c2ac8b136604439c87e97b9c0.svg",
     "static/media/research-pic-3.png": "/product-design-portfolio/static/media/research-pic-3.85197041552ea3797069.png",
+    "static/media/jamba-logo.png": "/product-design-portfolio/static/media/jamba-logo.79655d5ae42a0e060df1.png",
     "static/media/codesign-prototype-6.png": "/product-design-portfolio/static/media/codesign-prototype-6.59065824afed0cce4101.png",
     "static/media/moved-mobile.png": "/product-design-portfolio/static/media/moved-mobile.48b238ea61f289cd1cf3.png",
     "static/media/research-pic-4.png": "/product-design-portfolio/static/media/research-pic-4.aaeacf07e7cbb808fb2a.png",
@@ -121,10 +123,10 @@
     "index.html": "/product-design-portfolio/index.html",
     "static/media/wand-emoji.svg": "/product-design-portfolio/static/media/wand-emoji.f7c79f776f4f3ceaa4abdfd4af3e13c3.svg",
     "main.4fddafce.css.map": "/product-design-portfolio/static/css/main.4fddafce.css.map",
-    "main.93663ce3.js.map": "/product-design-portfolio/static/js/main.93663ce3.js.map"
+    "main.9a9330d0.js.map": "/product-design-portfolio/static/js/main.9a9330d0.js.map"
   },
   "entrypoints": [
     "static/css/main.4fddafce.css",
-    "static/js/main.93663ce3.js"
+    "static/js/main.9a9330d0.js"
   ]
 }
