@@ -103,6 +103,16 @@ function AppContent() {
     const LEO_JAMBA_GAP = isMobile ? 150 : 10
     const JAMBA_ABOUT_GAP = SECTION_GAP
     const SECTION_STEP = viewport.h * (isMobile ? 0.78 : 0.84)
+    const ABOUT_BASE_Y =
+        SECTION_STEP * 6 +
+        INTRO_MEDTRACKER_GAP +
+        MEDTRACKER_BISHOP_GAP +
+        BISHOP_CODESIGN_GAP +
+        CODESIGN_LEO_GAP +
+        LEO_JAMBA_GAP +
+        JAMBA_ABOUT_GAP
+    const ABOUT_END_BUFFER_PAGES = isMobile ? 0.18 : 0.25
+    const ABOUT_SCROLL_PAGE_OFFSET = ABOUT_BASE_Y / viewport.h + ABOUT_END_BUFFER_PAGES
 
 
     const diag = Math.hypot(viewport.w, viewport.h)
@@ -1013,13 +1023,13 @@ function AppContent() {
                         <JambaPage/>
                     </PageWrapper>
                     <PageWrapper
-                        baseY={SECTION_STEP * 6 + INTRO_MEDTRACKER_GAP + MEDTRACKER_BISHOP_GAP + BISHOP_CODESIGN_GAP + CODESIGN_LEO_GAP + LEO_JAMBA_GAP + JAMBA_ABOUT_GAP}
+                        baseY={ABOUT_BASE_Y}
                         translateX={stagePos.x}
                         translateY={stagePos.y}
                         scale={stageScale}
                         $activeTool={activeTool}
                     >
-                        <AboutPage scrollPageOffset={6} showResumeButton showIntroChip={false}/>
+                        <AboutPage scrollPageOffset={ABOUT_SCROLL_PAGE_OFFSET} showResumeButton showIntroChip={false}/>
                     </PageWrapper>
 
                     <CursorChat/>

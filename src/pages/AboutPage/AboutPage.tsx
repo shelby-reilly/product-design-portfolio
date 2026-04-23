@@ -95,7 +95,7 @@ export default function AboutPage({
             const pageHeight = sectionRef.current.getBoundingClientRect().height
             const viewportHeight = window.innerHeight || 1
             const extraPages = Math.max(0, pageHeight / viewportHeight - 1)
-            const trailingTrim = showResumeButton ? 0.2 : 0
+            const trailingTrim = 0
             zoomPanContext.setMaxScrollPages(Math.max(scrollPageOffset + extraPages - trailingTrim, 0))
         }
 
