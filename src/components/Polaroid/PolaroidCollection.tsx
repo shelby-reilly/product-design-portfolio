@@ -210,7 +210,7 @@ export default function PolaroidCollection() {
                     src={`${process.env.PUBLIC_URL}/images/polaroid/shelby-jamba-polaroid.png`}
                     alt="Jamba Juice Mobile"
                     title="Jamba Juice Mobile"
-                    date="MS HCI: 2021"
+                    date="MS HCI: 2019"
                     width={140}
                     rotationDeg={2.5}
                     zIndex={4}
