@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/product-design-portfolio/static/css/main.4fddafce.css",
-    "main.js": "/product-design-portfolio/static/js/main.bce58c2b.js",
+    "main.js": "/product-design-portfolio/static/js/main.0e91b492.js",
     "static/media/leo-onboarding-screens.svg": "/product-design-portfolio/static/media/leo-onboarding-screens.2ceb4145759c69320f245cff892bf524.svg",
     "static/media/leo-audio-screens-updated.png": "/product-design-portfolio/static/media/leo-audio-screens-updated.5deecb374b7597f3a204.png",
     "static/media/about-me-presentation-1.png": "/product-design-portfolio/static/media/about-me-presentation-1.5f3b7c64b78309d8b521.png",
@@ -123,10 +123,10 @@
     "index.html": "/product-design-portfolio/index.html",
     "static/media/wand-emoji.svg": "/product-design-portfolio/static/media/wand-emoji.f7c79f776f4f3ceaa4abdfd4af3e13c3.svg",
     "main.4fddafce.css.map": "/product-design-portfolio/static/css/main.4fddafce.css.map",
-    "main.bce58c2b.js.map": "/product-design-portfolio/static/js/main.bce58c2b.js.map"
+    "main.0e91b492.js.map": "/product-design-portfolio/static/js/main.0e91b492.js.map"
   },
   "entrypoints": [
     "static/css/main.4fddafce.css",
-    "static/js/main.bce58c2b.js"
+    "static/js/main.0e91b492.js"
   ]
 }
