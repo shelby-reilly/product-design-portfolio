@@ -2,7 +2,7 @@
   "name": "shelby-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://shelby-reilly.github.io/product-design-portfolio",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
